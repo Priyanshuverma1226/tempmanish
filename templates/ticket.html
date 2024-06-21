@@ -1,0 +1,30 @@
+{% extends "./base.html" %}
+
+{% block body %}
+
+
+<div class="container mt-5">
+    <div class="card shadow-sm" style="width: 100%;">
+    
+        <div class="card-header">
+      
+            <h5 class="card-title">Download Information Using Ticket</h5>      
+
+
+        </div>
+        <div class="card-body">
+            <form method="get" enctype="multipart/form-data" action="{% url "app:my_ticket" %}"> 
+              
+
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Ticket No</label>
+                  <input name="ticket" type="text" class="form-control" id="exampleInputPassword1">
+                </div>
+                
+                <button type="submit" class="btn btn-dark">Submit</button>
+               
+              </form>
+        </div>
+      </div>
+</div>
+{% endblock body %}
